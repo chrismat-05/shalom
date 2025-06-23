@@ -588,3 +588,4 @@ const verses = [
     text: "Do nothing out of selfish ambition or vain conceit. Rather, in humility value others above yourselves.",
   }
 ];
+export default verses;
