@@ -3,7 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-softGray text-textPrimary;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  @apply bg-softGray text-textPrimary font-sans overflow-x-hidden;
 }
