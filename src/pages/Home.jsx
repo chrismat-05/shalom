@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { Church, Clock, MapPin, Mail, Phone, Calendar, Users } from "lucide-react";
+import { Church, Clock, MapPin, Mail, Phone, Calendar, Users, Cross, BookOpen, HeartHandshake } from "lucide-react";
+import { Facebook as FacebookIcon, Instagram as InstagramIcon, Youtube as YoutubeIcon } from "lucide-react";
 import HeroSlider from "../components/HeroSlider";
 import FrostedCard from "../components/FrostedCard";
 import OnboardingModal from "../components/OnboardingModal";
-import { useTheme } from "../context/ThemeContext";
+import FixedBackgroundSection from "../components/FixBG";
+import {images} from "../assets/images";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -22,197 +24,348 @@ const itemVariants = {
     opacity: 1,
     transition: {
       duration: 0.6,
+      ease: "easeOut"
     },
   },
 };
 
+const fadeIn = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.8 }
+  }
+};
 export default function Home() {
-  const { theme } = useTheme();
-
   return (
-    <div className="bg-softGray dark:bg-slate">
+    <div className="bg-gradient-to-b from-blue-50 to-purple-50">
       <HeroSlider />
       
-      <div className="pt-5 pb-12 px-4 sm:px-8 max-w-7xl mx-auto relative z-10">
-        <OnboardingModal />
+      <FixedBackgroundSection imageUrl={images.bg1}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-24 relative z-10">
+          <motion.section 
+            className="mt-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <FrostedCard className="text-center">
+              <motion.div variants={itemVariants}>
+                <div className="flex justify-center mb-4">
+                  <Cross size={48} className="text-indigo-600" />
+                </div>
+                <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3">
+                  Welcome to IPC Shalom
+                </h2>
+                <p className="text-gray-700 mb-6 text-lg">
+                  A vibrant community of faith where lives are transformed through the power of Christ's love.
+                </p>
+                <motion.div className="flex justify-center gap-4">
+                  <motion.a
+                    href="/about"
+                    className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Learn More
+                  </motion.a>
+                  <motion.a
+                    href="#contact"
+                    className="inline-block border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-full hover:bg-indigo-600 hover:text-white transition shadow-lg"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Get in Touch
+                  </motion.a>
+                </motion.div>
+              </motion.div>
+            </FrostedCard>
+          </motion.section>
+        </div>
+      </FixedBackgroundSection>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16">
         <motion.section 
-          className="mt-10" 
-          id="about"
+          className="grid md:grid-cols-2 gap-12 items-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <FrostedCard className="text-center">
-            <motion.div variants={itemVariants}>
-              <div className="flex justify-center mb-4">
-                <Church size={48} className="text-royal dark:text-gold" />
+          <motion.div variants={itemVariants} className="relative">
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={images.community}
+                alt="Church Community" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/30 to-purple-600/30"></div>
+            </div>
+            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
+              <div className="bg-indigo-100 p-3 rounded-lg">
+                <HeartHandshake size={32} className="text-indigo-600" />
               </div>
-              <h2 className="text-4xl font-bold text-royal dark:text-gold mb-3">IPC Shalom</h2>
-              <p className="text-textPrimary dark:text-softGray mb-6 text-lg">
-                IPC Shalom is a Spirit-filled, Christ-centered church with a heart for people and a mission to share God's love. 
-                Whether you're new to faith or looking for a spiritual family, we welcome you to grow, worship, and serve with us.
-              </p>
-              <motion.a
-                href="/about"
-                className="inline-block bg-royal dark:bg-gold text-white dark:text-slate px-6 py-3 rounded-lg hover:bg-royal/90 dark:hover:bg-gold/90 transition shadow-md"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                More About Us
-              </motion.a>
-            </motion.div>
-          </FrostedCard>
+            </div>
+          </motion.div>
+          
+          <motion.div variants={itemVariants}>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
+            <p className="text-gray-600 mb-6">
+              IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, 
+              and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds 
+              and restore lives.
+            </p>
+            <div className="space-y-4">
+              {[
+                { icon: <Cross size={24} className="text-indigo-600" />, text: "Christ-centered worship" },
+                { icon: <BookOpen size={24} className="text-indigo-600" />, text: "Bible-based teaching" },
+                { icon: <HeartHandshake size={24} className="text-indigo-600" />, text: "Authentic community" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <div className="bg-indigo-100 p-2 rounded-lg">{item.icon}</div>
+                  <p className="text-gray-700">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </motion.section>
+      </div>
 
+      <FixedBackgroundSection imageUrl={images.bg2} darken={0.4}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-24 relative z-10">
+          <motion.section 
+            id="events"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <FrostedCard>
+              <motion.div variants={itemVariants} className="text-center mb-8">
+                <Clock size={48} className="mx-auto text-indigo-600 mb-4" />
+                <h2 className="text-3xl font-bold text-white mb-2">Worship With Us</h2>
+                <p className="text-indigo-100">Join us for our weekly services and gatherings</p>
+              </motion.div>
+              
+              <motion.div 
+                className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                variants={containerVariants}
+              >
+                {[
+                  { title: "Sunday Worship", time: "Sundays @ 7:30 PM", desc: "Our main weekly worship service", icon: <Church /> },
+                  { title: "Bible Study", time: "Fridays @ 11:00 AM", desc: "In-depth study of God's Word", icon: <BookOpen /> },
+                  { title: "Tamil Service", time: "Fridays @ 5:00 PM", desc: "Worship in Tamil language", icon: <Church /> },
+                  { title: "Youth Gathering", time: "Thursdays @ 7:30 PM", desc: "For our young members", icon: <Users /> },
+                  { title: "Prayer Meeting", time: "Wednesdays @ 7:30 PM", desc: "Corporate prayer gathering", icon: <Cross /> },
+                  { title: "Women's Fellowship", time: "2nd Monday @ 7:30 PM", desc: "Monthly women's gathering", icon: <Users /> }
+                ].map((item, idx) => (
+                  <motion.div 
+                    key={idx} 
+                    className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:bg-white/30 transition cursor-pointer group"
+                    variants={itemVariants}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-indigo-600/20 p-3 rounded-full mb-4 group-hover:bg-indigo-600/30 transition">
+                        {item.icon}
+                      </div>
+                      <h3 className="font-bold text-white text-xl mb-1">{item.title}</h3>
+                      <p className="text-indigo-100 font-medium mb-2">{item.time}</p>
+                      <p className="text-indigo-50 text-sm">{item.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </FrostedCard>
+          </motion.section>
+        </div>
+      </FixedBackgroundSection>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16">
         <motion.section 
-          className="mt-16" 
-          id="timings"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
         >
-          <FrostedCard>
-            <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
-              <Clock size={32} className="text-royal dark:text-gold" />
-              <h2 className="text-3xl font-bold text-royal dark:text-gold">Worship Timings</h2>
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">Our Ministries</h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto"></div>
+          </motion.div>
+          
+          <motion.div 
+            className="grid md:grid-cols-3 gap-8"
+            variants={containerVariants}
+          >
+            {[
+              { 
+                title: "Children's Ministry", 
+                desc: "Engaging programs for kids to learn about Jesus", 
+                icon: <Users />,
+                color: "from-blue-500 to-blue-600"
+              },
+              { 
+                title: "Youth Ministry", 
+                desc: "Dynamic gatherings for teens and young adults", 
+                icon: <Users />,
+                color: "from-purple-500 to-purple-600"
+              },
+              { 
+                title: "Women's Fellowship", 
+                desc: "Encouragement and growth for women of all ages", 
+                icon: <Users />,
+                color: "from-pink-500 to-pink-600"
+              },
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx} 
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
+                variants={itemVariants}
+                whileHover={{ y: -10 }}
+              >
+                <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
+                <div className="p-6">
+                  <div className={`bg-gradient-to-r ${item.color} p-3 rounded-full w-14 h-14 flex items-center justify-center text-white mb-4`}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                  <p className="text-gray-600">{item.desc}</p>
+                  <a href="#" className="mt-4 inline-block text-indigo-600 hover:underline">Learn more →</a>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.section>
+      </div>
+
+      <div className="bg-gradient-to-br from-indigo-700 to-purple-700 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <motion.section 
+            id="contact"
+            className="grid md:grid-cols-2 gap-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <motion.div variants={itemVariants}>
+              <h2 className="text-3xl font-bold text-white mb-4">We'd Love to Hear From You</h2>
+              <p className="text-indigo-100 mb-8">
+                Whether you have questions, prayer requests, or just want to say hello, our team is here to help.
+              </p>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <MapPin size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white mb-1">Visit us at</h3>
+                    <p className="text-indigo-100">IPC Shalom Church Villa, Zinj, Bahrain</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <Mail size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white mb-1">Email Us</h3>
+                    <p className="text-indigo-100">ipcshalom51@gmail.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4">
+                  <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <Phone size={24} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white mb-1">Call Us</h3>
+                    <p className="text-indigo-100">+973 3504 1017</p>
+                    <p className="text-indigo-100">+973 3945 1498</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <h3 className="font-bold text-white mb-4">Connect With Us</h3>
+                <div className="flex gap-4">
+                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                    <FacebookIcon size={20} className="text-white" />
+                  </a>
+                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                    <InstagramIcon size={20} className="text-white" />
+                  </a>
+                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                    <YoutubeIcon size={20} className="text-white" />
+                  </a>
+                </div>
+              </div>
             </motion.div>
             
-            <motion.div 
-              className="grid sm:grid-cols-2 gap-4"
-              variants={containerVariants}
-            >
-              {[
-                { title: "Sunday Service @ Church Villa", time: "Sunday 7:30 PM", icon: <Church /> },
-                { title: "CBS Friday @ Church Villa", time: "Friday 11:00 AM", icon: <Church /> },
-                { title: "Tamil Worship @ Church Villa", time: "Friday 5:00 PM", icon: <Church /> },
-                { title: "Gospel Meeting @ Church Villa", time: "Friday 7:30 PM", icon: <Church /> },
-                { title: "PYPA / Prayer Meetings", time: "Thursday 7:30 PM", icon: <Church /> },
-                { title: "Women's Fellowship", time: "2nd Monday 7:30 PM", icon: <Church /> }
-              ].map((item, idx) => (
-                <motion.div 
-                  key={idx} 
-                  className="bg-white/30 dark:bg-slate/70 rounded-xl p-4 border border-white/40 dark:border-slate/50 hover:bg-white/40 dark:hover:bg-slate/60 transition cursor-pointer"
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}
+            <motion.div variants={itemVariants}>
+              <FrostedCard>
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  className="grid gap-4"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-royal/20 dark:bg-gold/20 rounded-full text-royal dark:text-gold">
-                      {item.icon}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-textPrimary dark:text-softGray">{item.title}</h3>
-                      <p className="text-sm text-textSecondary dark:text-softGray/80">{item.time}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </FrostedCard>
-        </motion.section>
-
-        <motion.section 
-          className="mt-16 grid md:grid-cols-2 gap-8" 
-          id="contact"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
-          <motion.div variants={itemVariants}>
-            <FrostedCard>
-              <div className="flex items-center gap-3 mb-4 h-full">
-                <MapPin size={32} className="text-royal dark:text-gold" />
-                <h2 className="text-3xl font-bold text-royal dark:text-gold">Visit Us</h2>
-              </div>
-              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.580906443979!2d50.56563187934567!3d26.210308099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49af0020d677d7%3A0x6528d5c19e521f3!2sIPC%20Shalom%2C%20Bahrain!5e0!3m2!1sen!2sin!4v1750677385237!5m2!1sen!2sin"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </FrostedCard>
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <FrostedCard>
-              <div className="flex items-center gap-3 mb-4">
-                <Mail size={32} className="text-royal dark:text-gold" />
-                <h2 className="text-3xl font-bold text-royal dark:text-gold">Get In Touch</h2>
-              </div>
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                className="grid gap-4"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <motion.div variants={itemVariants}>
+                  <input type="hidden" name="getintouch" value="contact" />
+                  
                   <div className="relative">
                     <input
                       type="text"
                       name="name"
                       placeholder="Your Name"
                       required
-                      className="w-full p-3 rounded-lg bg-white/70 dark:bg-slate/70 border border-white/30 dark:border-slate/50 focus:border-royal dark:focus:border-gold focus:ring-1 focus:ring-royal dark:focus:ring-gold outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
                     />
                   </div>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
+                  
                   <div className="relative">
-                    <Phone size={20} className="absolute left-3 top-3.5 text-royal/50 dark:text-gold/50" />
                     <input
                       type="tel"
                       name="phone"
                       placeholder="Phone Number"
                       required
-                      className="w-full p-3 pl-10 rounded-lg bg-white/70 dark:bg-slate/70 border border-white/30 dark:border-slate/50 focus:border-royal dark:focus:border-gold focus:ring-1 focus:ring-royal dark:focus:ring-gold outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
                     />
                   </div>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
+                  
                   <div className="relative">
-                    <Mail size={20} className="absolute left-3 top-3.5 text-royal/50 dark:text-gold/50" />
                     <input
                       type="email"
                       name="email"
                       placeholder="Your Email (optional)"
-                      className="w-full p-3 pl-10 rounded-lg bg-white/70 dark:bg-slate/70 border border-white/30 dark:border-slate/50 focus:border-royal dark:focus:border-gold focus:ring-1 focus:ring-royal dark:focus:ring-gold outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
                     />
                   </div>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <textarea
-                    name="message"
-                    rows="4"
-                    placeholder="Your Message or Prayer Request"
-                    required
-                    className="w-full p-3 rounded-lg bg-white/70 dark:bg-slate/70 border border-white/30 dark:border-slate/50 focus:border-royal dark:focus:border-gold focus:ring-1 focus:ring-royal dark:focus:ring-gold outline-none transition"
-                  ></textarea>
-                </motion.div>
-                
-                <motion.div variants={itemVariants}>
-                  <button
+                  
+                  <div className="relative">
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder="Your Message or Prayer Request"
+                      required
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
+                    ></textarea>
+                  </div>
+                  
+                  <motion.button
                     type="submit"
-                    className="w-full bg-royal dark:bg-gold text-white dark:text-slate py-3 px-6 rounded-lg hover:bg-royal/90 dark:hover:bg-gold/90 transition shadow-md font-medium"
+                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-xl hover:opacity-90 transition shadow-lg font-medium"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     Send Message
-                  </button>
-                </motion.div>
-              </form>
-            </FrostedCard>
-          </motion.div>
-        </motion.section>
+                  </motion.button>
+                </form>
+              </FrostedCard>
+            </motion.div>
+          </motion.section>
+        </div>
       </div>
     </div>
   );
