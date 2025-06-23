@@ -3,5 +3,25 @@
 @tailwind utilities;
 
 body {
-  @apply bg-softGray text-textPrimary font-sans overflow-x-hidden;
+  @apply bg-softGray text-textPrimary dark:bg-slate dark:text-softGray font-sans overflow-x-hidden transition-colors duration-200;
+}
+
+input, textarea, select {
+  @apply bg-white/70 dark:bg-slate/70 text-textPrimary dark:text-softGray border border-white/30 dark:border-slate/50 rounded-lg;
+}
+
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-1 ring-royal dark:ring-gold border-royal dark:border-gold;
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-softGray dark:bg-slate;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-royal/30 dark:bg-gold/30 rounded-full hover:bg-royal/50 dark:hover:bg-gold/50;
 }
