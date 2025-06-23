@@ -9,7 +9,6 @@ export default function Home() {
 
       <OnboardingModal />
 
-      {/* About Summary */}
       <section className="mt-12" id="about">
         <FrostedCard>
           <h2 className="text-2xl font-bold text-royal mb-2">About IPC Shalom</h2>
@@ -19,7 +18,6 @@ export default function Home() {
         </FrostedCard>
       </section>
 
-      {/* Google Maps + Join Us */}
       <section className="mt-12">
         <FrostedCard>
           <h2 className="text-2xl font-bold text-royal mb-2">Join Us In-Person</h2>
@@ -36,7 +34,6 @@ export default function Home() {
         </FrostedCard>
       </section>
 
-      {/* Contact Section */}
       <section className="mt-12" id="contact">
         <FrostedCard>
           <h2 className="text-2xl font-bold text-royal mb-2">Reach Out</h2>
