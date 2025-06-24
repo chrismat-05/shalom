@@ -36,13 +36,13 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect</h3>
             <div className="flex gap-4 mb-4">
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.facebook.com/ipcshalombh/" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <FacebookIcon size={20} className="text-white" />
               </a>
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.instagram.com/ipcshalombh/" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <InstagramIcon size={20} className="text-white" />
               </a>
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.youtube.com/@ipcshalombh" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <YoutubeIcon size={20} className="text-white" />
               </a>
             </div>
