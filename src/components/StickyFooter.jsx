@@ -16,10 +16,11 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-indigo-100 hover:text-white transition">Home</a></li>
-              <li><a href="#" className="text-indigo-100 hover:text-white transition">About Us</a></li>
-              <li><a href="#" className="text-indigo-100 hover:text-white transition">Ministries</a></li>
-              <li><a href="#" className="text-indigo-100 hover:text-white transition">Contact</a></li>
+              <li><a href="/" className="text-indigo-100 hover:text-white transition">Home</a></li>
+              <li><a href="/about" className="text-indigo-100 hover:text-white transition">About Us</a></li>
+              <li><a href="/ministries" className="text-indigo-100 hover:text-white transition">Ministries</a></li>
+              <li><a href="/gallery" className="text-indigo-100 hover:text-white transition">Gallery</a></li>
+              <li><a href="#contact" className="text-indigo-100 hover:text-white transition">Contact</a></li>
             </ul>
           </div>
           
@@ -36,13 +37,13 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Connect</h3>
             <div className="flex gap-4 mb-4">
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.facebook.com/ipcshalombh/" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <FacebookIcon size={20} className="text-white" />
               </a>
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.instagram.com/ipcshalombh/" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <InstagramIcon size={20} className="text-white" />
               </a>
-              <a href="#" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
+              <a href="https://www.youtube.com/@ipcshalombh" className="bg-indigo-700/50 p-3 rounded-full hover:bg-indigo-700 transition">
                 <YoutubeIcon size={20} className="text-white" />
               </a>
             </div>

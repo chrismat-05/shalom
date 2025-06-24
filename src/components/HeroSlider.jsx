@@ -9,17 +9,17 @@ const slides = [
   {
     image: hero1,
     title: "Welcome to IPC Shalom",
-    subtitle: "Come, Let Us Worship Together." //group photo recommended
+    subtitle: "Come, Let Us Worship Together."
   },
   {
     image: hero2,
     title: "Grow in Christ",
-    subtitle: "Experience Spirit-filled Worship and Teaching." //make a collage of worship team, speakers
+    subtitle: "Experience Spirit-filled Worship and Teaching."
   },
   {
     image: hero3,
     title: "Join Our Family",
-    subtitle: "Be a part of our various fellowships." //make a collage of pypa, cbs and all
+    subtitle: "Be a part of our various fellowships."
   }
 ];
 
@@ -61,7 +61,7 @@ export default function HeroSlider() {
         </AnimatePresence>
       </div>
 
-      <div className="absolute inset-0 bg-black/20 flex flex-col justify-center items-center text-white text-center p-4">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30 flex flex-col justify-center items-center text-center p-4">
         <AnimatePresence>
           {showContent && (
             <motion.div
@@ -70,12 +70,16 @@ export default function HeroSlider() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
+              className="max-w-4xl"
             >
-              <h1 className="text-3xl sm:text-7xl font-bold mb-2">
+              <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-white">
                 {slides[current].title}
               </h1>
-              <p className="text-lg sm:text-3xl mb-4">{slides[current].subtitle}</p>
-              <a href="#contact" className="px-4 py-2 bg-gold text-black rounded-full hover:opacity-90">
+              <p className="text-xl sm:text-3xl mb-8 text-indigo-100">{slides[current].subtitle}</p>
+              <a 
+                href="#contact" 
+                className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full hover:opacity-90 transition shadow-lg"
+              >
                 Get in Touch
               </a>
             </motion.div>
@@ -85,15 +89,15 @@ export default function HeroSlider() {
 
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/60 p-2 rounded-full"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full hover:bg-white transition shadow-lg"
       >
-        <ChevronLeft />
+        <ChevronLeft size={24} className="text-indigo-600" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/60 p-2 rounded-full"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full hover:bg-white transition shadow-lg"
       >
-        <ChevronRight />
+        <ChevronRight size={24} className="text-indigo-600" />
       </button>
     </div>
   );
