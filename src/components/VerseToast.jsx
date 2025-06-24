@@ -24,21 +24,21 @@ export default function VerseToast() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-6 right-6 max-w-sm p-4 bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl shadow-xl z-50 hidden sm:flex flex-col gap-2 text-sm text-white"
+            className="fixed bottom-6 right-6 max-w-sm p-4 bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl shadow-xl z-50 hidden sm:flex flex-col gap-2 text-sm"
           >
-            <div className="text-textSecondary dark:text-softGray/80">Here's a Bible Verse for you:</div>
-            <div className="text-textPrimary font-semibold">{verse.text}</div>
-            <div className="text-xs text-textSecondary dark:text-softGray/70 text-right italic">— {verse.reference}</div>
+            <div className="text-indigo-800">Here's a Bible Verse for you:</div>
+            <div className="text-gray-800 font-semibold">{verse.text}</div>
+            <div className="text-xs text-indigo-700 text-right italic">— {verse.reference}</div>
             <div className="flex justify-between items-center mt-2">
               <button
                 onClick={handleShare}
-                className="text-gold dark:text-gold-dark flex items-center gap-1 hover:underline"
+                className="text-indigo-600 flex items-center gap-1 hover:underline"
               >
                 <Share2 size={16} /> Share
               </button>
               <button
                 onClick={() => setVisible(false)}
-                className="text-white/60 hover:text-white"
+                className="text-gray-600 hover:text-gray-800"
               >
                 ✕
               </button>
@@ -53,7 +53,7 @@ export default function VerseToast() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: [1, 1.1, 1] }}
           transition={{ repeat: Infinity, repeatType: "loop", duration: 2 }}
-          className="fixed bottom-6 right-6 p-3 bg-white/20 backdrop-blur-md border border-white/30 rounded-full shadow-md z-40 text-white hidden sm:flex"
+          className="fixed bottom-6 right-6 p-3 bg-indigo-600/20 backdrop-blur-md border border-indigo-600/30 rounded-full shadow-md z-40 text-indigo-600 hidden sm:flex"
         >
           <MessageSquareQuote size={20} />
         </motion.button>
