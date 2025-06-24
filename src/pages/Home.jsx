@@ -29,13 +29,6 @@ const itemVariants = {
   },
 };
 
-const fadeIn = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.8 }
-  }
-};
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-purple-50">
@@ -85,55 +78,57 @@ export default function Home() {
         </div>
       </FixedBackgroundSection>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-        <motion.section 
-          className="grid md:grid-cols-2 gap-12 items-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
-          <motion.div variants={itemVariants} className="relative">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={images.community}
-                alt="Church Community" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/30 to-purple-600/30"></div>
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
-              <div className="bg-indigo-100 p-3 rounded-lg">
-                <HeartHandshake size={32} className="text-indigo-600" />
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <motion.section 
+            className="grid md:grid-cols-2 gap-12 items-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={containerVariants}
+          >
+            <motion.div variants={itemVariants} className="relative">
+              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={images.community}
+                  alt="Church Community" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/30 to-purple-600/30"></div>
               </div>
-            </div>
-          </motion.div>
-          
-          <motion.div variants={itemVariants}>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
-            <p className="text-gray-600 mb-6">
-              IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, 
-              and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds 
-              and restore lives.
-            </p>
-            <div className="space-y-4">
-              {[
-                { icon: <Cross size={24} className="text-indigo-600" />, text: "Christ-centered worship" },
-                { icon: <BookOpen size={24} className="text-indigo-600" />, text: "Bible-based teaching" },
-                { icon: <HeartHandshake size={24} className="text-indigo-600" />, text: "Authentic community" }
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3">
-                  <div className="bg-indigo-100 p-2 rounded-lg">{item.icon}</div>
-                  <p className="text-gray-700">{item.text}</p>
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
+                <div className="bg-indigo-100 p-3 rounded-lg">
+                  <HeartHandshake size={32} className="text-indigo-600" />
                 </div>
-              ))}
-            </div>
-          </motion.div>
-        </motion.section>
+              </div>
+            </motion.div>
+            
+            <motion.div variants={itemVariants}>
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission & Vision</h2>
+              <p className="text-gray-600 mb-6">
+                IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, 
+                and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds 
+                and restore lives.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: <Cross size={24} className="text-indigo-600" />, text: "Christ-centered worship" },
+                  { icon: <BookOpen size={24} className="text-indigo-600" />, text: "Bible-based teaching" },
+                  { icon: <HeartHandshake size={24} className="text-indigo-600" />, text: "Authentic community" }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="bg-indigo-100 p-2 rounded-lg">{item.icon}</div>
+                    <p className="text-gray-700">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.section>
+        </div>
       </div>
 
-      <FixedBackgroundSection imageUrl={images.bg2} darken={0.4}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 py-24 relative z-10">
+      <div className="bg-gradient-to-br from-indigo-100 to-purple-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <motion.section 
             id="events"
             initial="hidden"
@@ -144,8 +139,8 @@ export default function Home() {
             <FrostedCard>
               <motion.div variants={itemVariants} className="text-center mb-8">
                 <Clock size={48} className="mx-auto text-indigo-600 mb-4" />
-                <h2 className="text-3xl font-bold text-white mb-2">Worship With Us</h2>
-                <p className="text-indigo-100">Join us for our weekly services and gatherings</p>
+                <h2 className="text-3xl font-bold text-indigo-700 mb-2">Worship With Us</h2>
+                <p className="text-indigo-600">Join us for our weekly services and gatherings</p>
               </motion.div>
               
               <motion.div 
@@ -162,17 +157,17 @@ export default function Home() {
                 ].map((item, idx) => (
                   <motion.div 
                     key={idx} 
-                    className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30 hover:bg-white/30 transition cursor-pointer group"
+                    className="bg-white rounded-xl p-6 border border-indigo-100 hover:border-indigo-200 transition cursor-pointer group shadow-sm"
                     variants={itemVariants}
                     whileHover={{ y: -5 }}
                   >
                     <div className="flex flex-col items-center text-center">
-                      <div className="bg-indigo-600/20 p-3 rounded-full mb-4 group-hover:bg-indigo-600/30 transition">
+                      <div className="bg-indigo-100 p-3 rounded-full mb-4 group-hover:bg-indigo-200 transition">
                         {item.icon}
                       </div>
-                      <h3 className="font-bold text-white text-xl mb-1">{item.title}</h3>
-                      <p className="text-indigo-100 font-medium mb-2">{item.time}</p>
-                      <p className="text-indigo-50 text-sm">{item.desc}</p>
+                      <h3 className="font-bold text-indigo-700 text-xl mb-1">{item.title}</h3>
+                      <p className="text-indigo-600 font-medium mb-2">{item.time}</p>
+                      <p className="text-indigo-500 text-sm">{item.desc}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -180,63 +175,65 @@ export default function Home() {
             </FrostedCard>
           </motion.section>
         </div>
-      </FixedBackgroundSection>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-        <motion.section 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={containerVariants}
-        >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">Our Ministries</h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto"></div>
-          </motion.div>
-          
-          <motion.div 
-            className="grid md:grid-cols-3 gap-8"
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <motion.section 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             variants={containerVariants}
           >
-            {[
-              { 
-                title: "Children's Ministry", 
-                desc: "Engaging programs for kids to learn about Jesus", 
-                icon: <Users />,
-                color: "from-blue-500 to-blue-600"
-              },
-              { 
-                title: "Youth Ministry", 
-                desc: "Dynamic gatherings for teens and young adults", 
-                icon: <Users />,
-                color: "from-purple-500 to-purple-600"
-              },
-              { 
-                title: "Women's Fellowship", 
-                desc: "Encouragement and growth for women of all ages", 
-                icon: <Users />,
-                color: "from-pink-500 to-pink-600"
-              },
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition"
-                variants={itemVariants}
-                whileHover={{ y: -10 }}
-              >
-                <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
-                <div className="p-6">
-                  <div className={`bg-gradient-to-r ${item.color} p-3 rounded-full w-14 h-14 flex items-center justify-center text-white mb-4`}>
-                    {item.icon}
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-indigo-700 mb-2">Our Ministries</h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto"></div>
+            </motion.div>
+            
+            <motion.div 
+              className="grid md:grid-cols-3 gap-8"
+              variants={containerVariants}
+            >
+              {[
+                { 
+                  title: "Children's Ministry", 
+                  desc: "Engaging programs for kids to learn about Jesus", 
+                  icon: <Users className="text-indigo-600" />,
+                  color: "from-blue-100 to-blue-200"
+                },
+                { 
+                  title: "Youth Ministry", 
+                  desc: "Dynamic gatherings for teens and young adults", 
+                  icon: <Users className="text-purple-600" />,
+                  color: "from-purple-100 to-purple-200"
+                },
+                { 
+                  title: "Women's Fellowship", 
+                  desc: "Encouragement and growth for women of all ages", 
+                  icon: <Users className="text-pink-600" />,
+                  color: "from-pink-100 to-pink-200"
+                },
+              ].map((item, idx) => (
+                <motion.div 
+                  key={idx} 
+                  className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition"
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
+                >
+                  <div className={`h-2 bg-gradient-to-r ${item.color}`}></div>
+                  <div className="p-6">
+                    <div className={`bg-gradient-to-r ${item.color} p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4`}>
+                      {item.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-indigo-700 mb-2">{item.title}</h3>
+                    <p className="text-gray-600">{item.desc}</p>
+                    <a href="#" className="mt-4 inline-block text-indigo-600 hover:underline">Learn more →</a>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                  <a href="#" className="mt-4 inline-block text-indigo-600 hover:underline">Learn more →</a>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.section>
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.section>
+        </div>
       </div>
 
       <div className="bg-gradient-to-br from-indigo-700 to-purple-700 py-16">
@@ -312,7 +309,7 @@ export default function Home() {
                   data-netlify="true"
                   className="grid gap-4"
                 >
-                  <input type="hidden" name="getintouch" value="contact" />
+                  <input type="hidden" name="form-name" value="contact" />
                   
                   <div className="relative">
                     <input
@@ -320,7 +317,7 @@ export default function Home() {
                       name="name"
                       placeholder="Your Name"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
                     />
                   </div>
                   
@@ -330,7 +327,7 @@ export default function Home() {
                       name="phone"
                       placeholder="Phone Number"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
                     />
                   </div>
                   
@@ -339,7 +336,7 @@ export default function Home() {
                       type="email"
                       name="email"
                       placeholder="Your Email (optional)"
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
                     />
                   </div>
                   
@@ -349,7 +346,7 @@ export default function Home() {
                       rows="4"
                       placeholder="Your Message or Prayer Request"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
                     ></textarea>
                   </div>
                   
