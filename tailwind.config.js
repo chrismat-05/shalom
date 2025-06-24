@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      scrollMargin: {
+        '20': '5rem',
+      },
       colors: {
         royal: {
           DEFAULT: '#2563EB',
