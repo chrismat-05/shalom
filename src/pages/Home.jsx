@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { Church, Clock, MapPin, Mail, Phone, Calendar, Users, Cross, BookOpen, HeartHandshake } from "lucide-react";
 import { Facebook as FacebookIcon, Instagram as InstagramIcon, Youtube as YoutubeIcon } from "lucide-react";
+
 import HeroSlider from "../components/HeroSlider";
 import FrostedCard from "../components/FrostedCard";
 import OnboardingModal from "../components/OnboardingModal";
 import FixedBackgroundSection from "../components/FixBG";
 import {images} from "../assets/images";
+import Header from "../components/Header";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -32,8 +34,10 @@ const itemVariants = {
 export default function Home() {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-purple-50">
-      <HeroSlider />
-      
+      <section className="hero">
+        <HeroSlider />
+      </section>
+      <Header />
       <FixedBackgroundSection imageUrl={images.bg1}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-24 relative z-10">
           <motion.section 
