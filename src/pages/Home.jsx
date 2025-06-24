@@ -288,13 +288,13 @@ export default function Home() {
               <div className="mt-8">
                 <h3 className="font-bold text-white mb-4">Connect With Us</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                  <a href="https://www.facebook.com/ipcshalombh/" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
                     <FacebookIcon size={20} className="text-white" />
                   </a>
-                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                  <a href="https://www.instagram.com/ipcshalombh/" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
                     <InstagramIcon size={20} className="text-white" />
                   </a>
-                  <a href="#" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
+                  <a href="https://www.youtube.com/@ipcshalombh" className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition">
                     <YoutubeIcon size={20} className="text-white" />
                   </a>
                 </div>
