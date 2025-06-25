@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About/Index";
+import About from "./pages/About";
 import SereneBackground from "./components/SereneBackground";
 import StickyFooter from "./components/StickyFooter";
 import VerseToast from "./components/VerseToast";
