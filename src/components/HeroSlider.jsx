@@ -75,10 +75,10 @@ export default function HeroSlider() {
               <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-white">
                 {slides[current].title}
               </h1>
-              <p className="text-xl sm:text-3xl mb-8 text-indigo-100">{slides[current].subtitle}</p>
+              <p className="text-xl sm:text-3xl mb-8 text-red-100">{slides[current].subtitle}</p>
               <a 
                 href="#contact" 
-                className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full hover:opacity-90 transition shadow-lg"
+                className="px-8 py-3 bg-gradient-to-r from-red-600 to-green-600 text-white rounded-full hover:opacity-90 transition shadow-lg"
               >
                 Get in Touch
               </a>

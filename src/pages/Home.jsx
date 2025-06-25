@@ -51,9 +51,9 @@ export default function Home() {
             <FrostedCard className="text-center">
               <motion.div variants={itemVariants}>
                 <div className="flex justify-center mb-4">
-                  <Cross size={48} className="text-indigo-600" />
+                  <Cross size={48} className="text-red-600" />
                 </div>
-                <h2 className="text-4xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-3">
+                <h2 className="text-4xl font-bold bg-gradient-to-r from-red-600 to-green-600 bg-clip-text text-transparent mb-3">
                   Welcome to IPC Shalom
                 </h2>
                 <p className="text-gray-700 mb-6 text-lg">
@@ -62,7 +62,7 @@ export default function Home() {
                 <motion.div className="flex justify-center gap-4">
                   <motion.a
                     href="/about"
-                    className="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg"
+                    className="inline-block bg-gradient-to-r from-red-600 to-green-600 text-white px-6 py-3 rounded-full hover:opacity-90 transition shadow-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -70,7 +70,7 @@ export default function Home() {
                   </motion.a>
                   <motion.a
                     href="#contact"
-                    className="inline-block border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-full hover:bg-indigo-600 hover:text-white transition shadow-lg"
+                    className="inline-block border-2 border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-600 hover:text-white transition shadow-lg"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </FixedBackgroundSection>
 
-      <div className="relative py-16 overflow-hidden bg-gradient-to-b from-indigo-900/10 via-purple-900/10 to-indigo-900/10">
+      <div className="relative py-16 overflow-hidden bg-gradient-to-b from-red-900/10 via-green-900/10 to-red-900/10">
         <SereneBackground />
         <div className="relative z-10 space-y-24 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-20">
@@ -101,18 +101,18 @@ export default function Home() {
                     alt="Church Community" 
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/30 to-purple-600/30"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-red-600/30 to-green-600/30"></div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
-                  <div className="bg-indigo-100 p-3 rounded-lg">
-                    <HeartHandshake size={32} className="text-indigo-600" />
+                  <div className="bg-red-100 p-3 rounded-lg">
+                    <HeartHandshake size={32} className="text-red-600" />
                   </div>
                 </div>
               </motion.div>
               
               <motion.div variants={itemVariants}>
                 <FrostedCard>
-                  <h2 className="text-3xl font-bold text-indigo-700 mb-4">Our Mission & Vision</h2>
+                  <h2 className="text-3xl font-bold text-red-700 mb-4">Our Mission & Vision</h2>
                   <p className="text-gray-600 mb-6">
                     IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, 
                     and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds 
@@ -120,12 +120,12 @@ export default function Home() {
                   </p>
                   <div className="space-y-4">
                     {[
-                      { icon: <Cross size={24} className="text-indigo-600" />, text: "Christ-centered worship" },
-                      { icon: <BookOpen size={24} className="text-indigo-600" />, text: "Bible-based teaching" },
-                      { icon: <HeartHandshake size={24} className="text-indigo-600" />, text: "Authentic community" }
+                      { icon: <Cross size={24} className="text-red-600" />, text: "Christ-centered worship" },
+                      { icon: <BookOpen size={24} className="text-red-600" />, text: "Bible-based teaching" },
+                      { icon: <HeartHandshake size={24} className="text-red-600" />, text: "Authentic community" }
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-3">
-                        <div className="bg-indigo-100 p-2 rounded-lg">{item.icon}</div>
+                        <div className="bg-red-100 p-2 rounded-lg">{item.icon}</div>
                         <p className="text-gray-700">{item.text}</p>
                       </div>
                     ))}
@@ -146,9 +146,9 @@ export default function Home() {
               <motion.div variants={itemVariants}>
                 <FrostedCard>
                   <div className="text-center mb-8">
-                    <Clock size={48} className="mx-auto text-indigo-600 mb-4" />
-                    <h2 className="text-3xl font-bold text-indigo-700 mb-2">Worship Timings</h2>
-                    <p className="text-indigo-600">Join us for our weekly services and gatherings</p>
+                    <Clock size={48} className="mx-auto text-red-600 mb-4" />
+                    <h2 className="text-3xl font-bold text-red-700 mb-2">Worship Timings</h2>
+                    <p className="text-red-600">Join us for our weekly services and gatherings</p>
                   </div>
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -162,17 +162,17 @@ export default function Home() {
                     ].map((item, idx) => (
                       <motion.div 
                         key={idx} 
-                        className="bg-white rounded-xl p-6 border border-indigo-100 hover:border-indigo-200 transition cursor-pointer group shadow-sm"
+                        className="bg-white rounded-xl p-6 border border-red-100 hover:border-red-200 transition cursor-pointer group shadow-sm"
                         variants={itemVariants}
                         whileHover={{ y: -5 }}
                       >
                         <div className="flex flex-col items-center text-center">
-                          <div className="bg-indigo-100 p-3 rounded-full mb-4 group-hover:bg-indigo-200 transition">
+                          <div className="bg-red-100 p-3 rounded-full mb-4 group-hover:bg-red-200 transition">
                             {item.icon}
                           </div>
-                          <h3 className="font-bold text-indigo-700 text-xl mb-1">{item.title}</h3>
-                          <p className="text-indigo-600 font-medium mb-2">{item.time}</p>
-                          <p className="text-indigo-500 text-sm">{item.desc}</p>
+                          <h3 className="font-bold text-red-700 text-xl mb-1">{item.title}</h3>
+                          <p className="text-red-600 font-medium mb-2">{item.time}</p>
+                          <p className="text-red-500 text-sm">{item.desc}</p>
                         </div>
                       </motion.div>
                     ))}
@@ -191,8 +191,8 @@ export default function Home() {
             >
               <FrostedCard>
                 <motion.div variants={itemVariants} className="text-center mb-12">
-                  <h2 className="text-3xl font-bold text-indigo-700 mb-2">Our Ministries</h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto"></div>
+                  <h2 className="text-3xl font-bold text-red-700 mb-2">Our Ministries</h2>
+                  <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-green-600 mx-auto"></div>
                 </motion.div>
                 
                 <motion.div 
@@ -203,20 +203,20 @@ export default function Home() {
                     { 
                       title: "Children's Ministry", 
                       desc: "Engaging programs for kids to learn about Jesus", 
-                      icon: <Users className="text-indigo-600" />,
-                      color: "from-blue-100 to-blue-200"
+                      icon: <Users className="text-red-600" />,
+                      color: "from-red-100 to-red-200"
                     },
                     { 
                       title: "Youth Ministry", 
                       desc: "Dynamic gatherings for teens and young adults", 
-                      icon: <Users className="text-purple-600" />,
-                      color: "from-purple-100 to-purple-200"
+                      icon: <Users className="text-green-600" />,
+                      color: "from-green-100 to-green-200"
                     },
                     { 
                       title: "Women's Fellowship", 
                       desc: "Encouragement and growth for women of all ages", 
-                      icon: <Users className="text-pink-600" />,
-                      color: "from-pink-100 to-pink-200"
+                      icon: <Users className="text-yellow-600" />,
+                      color: "from-yellow-100 to-yellow-200"
                     },
                   ].map((item, idx) => (
                     <motion.div 
@@ -230,9 +230,9 @@ export default function Home() {
                         <div className={`bg-gradient-to-r ${item.color} p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4`}>
                           {item.icon}
                         </div>
-                        <h3 className="text-xl font-bold text-indigo-700 mb-2">{item.title}</h3>
+                        <h3 className="text-xl font-bold text-red-700 mb-2">{item.title}</h3>
                         <p className="text-gray-600">{item.desc}</p>
-                        <a href="#" className="mt-4 inline-block text-indigo-600 hover:underline">Learn more →</a>
+                        <a href="#" className="mt-4 inline-block text-red-600 hover:underline">Learn more →</a>
                       </div>
                     </motion.div>
                   ))}
@@ -240,11 +240,69 @@ export default function Home() {
               </FrostedCard>
             </motion.section>
           </div>
+
+          {/* New Section: Upcoming Events */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+            <motion.section 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={containerVariants}
+            >
+              <FrostedCard>
+                <motion.div variants={itemVariants} className="text-center mb-12">
+                  <h2 className="text-3xl font-bold text-red-700 mb-2">Upcoming Events</h2>
+                  <div className="w-24 h-1 bg-gradient-to-r from-red-600 to-green-600 mx-auto"></div>
+                </motion.div>
+                
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[
+                    {
+                      title: "Annual Prayer Conference",
+                      date: "June 15-17, 2023",
+                      desc: "Join us for three days of powerful prayer and worship",
+                      icon: <Calendar className="text-red-600" />
+                    },
+                    {
+                      title: "Children's Vacation Bible School",
+                      date: "July 10-14, 2023",
+                      desc: "Fun-filled week of Bible stories, games and activities for kids",
+                      icon: <Users className="text-green-600" />
+                    },
+                    {
+                      title: "Mission Sunday",
+                      date: "August 6, 2023",
+                      desc: "Special service focusing on our mission work",
+                      icon: <Cross className="text-red-600" />
+                    }
+                  ].map((event, idx) => (
+                    <motion.div 
+                      key={idx}
+                      className="bg-white p-6 rounded-xl border border-gray-100 hover:border-red-200 transition shadow-sm"
+                      variants={itemVariants}
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="bg-red-100 p-3 rounded-lg">
+                          {event.icon}
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-red-700 mb-1">{event.title}</h3>
+                          <p className="text-green-600 font-medium mb-2">{event.date}</p>
+                          <p className="text-gray-600">{event.desc}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </FrostedCard>
+            </motion.section>
+          </div>
         </div>
       </div>
 
       <div className="relative py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-700/70 to-purple-700/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-700/70 to-green-700/70"></div>
         <SereneBackground />
         <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10 py-16">
           <motion.section 
@@ -258,39 +316,39 @@ export default function Home() {
             <motion.div variants={itemVariants}>
               <FrostedCard>
                 <h2 className="text-3xl font-bold text-white mb-4">We'd Love to Hear From You</h2>
-                <p className="text-indigo-100 mb-8">
+                <p className="text-red-100 mb-8">
                   Whether you have questions, prayer requests, or just want to say hello, our team is here to help.
                 </p>
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <div className="bg-red-600/30 p-3 rounded-lg">
                       <MapPin size={24} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">Visit us at</h3>
-                      <p className="text-indigo-100">IPC Shalom Church Villa, Zinj, Bahrain</p>
+                      <p className="text-red-100">IPC Shalom Church Villa, Zinj, Bahrain</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <div className="bg-red-600/30 p-3 rounded-lg">
                       <Mail size={24} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">Email Us</h3>
-                      <p className="text-indigo-100">ipcshalom51@gmail.com</p>
+                      <p className="text-red-100">ipcshalom51@gmail.com</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <div className="bg-indigo-600/30 p-3 rounded-lg">
+                    <div className="bg-red-600/30 p-3 rounded-lg">
                       <Phone size={24} className="text-white" />
                     </div>
                     <div>
                       <h3 className="font-bold text-white mb-1">Call Us</h3>
-                      <p className="text-indigo-100">+973 3504 1017</p>
-                      <p className="text-indigo-100">+973 3945 1498</p>
+                      <p className="text-red-100">+973 3504 1017</p>
+                      <p className="text-red-100">+973 3945 1498</p>
                     </div>
                   </div>
                 </div>
@@ -328,7 +386,7 @@ export default function Home() {
                       name="name"
                       placeholder="Your Name"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-red-300 focus:ring-2 focus:ring-red-200 outline-none transition text-white placeholder-red-200"
                     />
                   </div>
                   
@@ -338,7 +396,7 @@ export default function Home() {
                       name="phone"
                       placeholder="Phone Number"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-red-300 focus:ring-2 focus:ring-red-200 outline-none transition text-white placeholder-red-200"
                     />
                   </div>
                   
@@ -347,7 +405,7 @@ export default function Home() {
                       type="email"
                       name="email"
                       placeholder="Your Email (optional)"
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-red-300 focus:ring-2 focus:ring-red-200 outline-none transition text-white placeholder-red-200"
                     />
                   </div>
                   
@@ -357,13 +415,13 @@ export default function Home() {
                       rows="4"
                       placeholder="Your Message or Prayer Request"
                       required
-                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 outline-none transition text-white placeholder-indigo-200"
+                      className="w-full p-4 rounded-xl bg-white/10 border border-white/30 focus:border-red-300 focus:ring-2 focus:ring-red-200 outline-none transition text-white placeholder-red-200"
                     ></textarea>
                   </div>
                   
                   <motion.button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-xl hover:opacity-90 transition shadow-lg font-medium"
+                    className="w-full bg-gradient-to-r from-red-600 to-green-600 text-white py-4 px-6 rounded-xl hover:opacity-90 transition shadow-lg font-medium"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
