@@ -27,17 +27,30 @@ const Ministries = () => {
       
       <div className="relative z-10 pt-24 pb-16 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FrostedCard className="mb-16">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-600 to-green-600 bg-clip-text text-transparent">
-                Our Ministries
-              </h1>
-              <p className="text-lg max-w-3xl mx-auto text-gray-700">
-                Discover the vibrant ministries that form the heartbeat of our church family, each
-                serving unique needs and nurturing spiritual growth.
-              </p>
+            <FrostedCard className="mb-16">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                <div className="rounded-2xl overflow-hidden h-64">
+                    <img
+                    src={images.cbs10}
+                    alt="Children's Bible School"
+                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
+                    loading="lazy"
+                    />
+                </div>
+                </div>
+                <div className="w-full md:w-2/3 text-center md:text-left">
+                <HeartHandshake size={48} className="text-red-600" />
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-red-600 to-green-600 bg-clip-text text-transparent">
+                    Our Ministries
+                </h1>
+                <p className="text-lg max-w-3xl mx-auto md:mx-0 text-gray-700">
+                    Discover the vibrant ministries that form the heartbeat of our church family, each
+                    serving unique needs and nurturing spiritual growth.
+                </p>
+                </div>
             </div>
-          </FrostedCard>
+            </FrostedCard>
 
           <FrostedCard className="mb-16">
             <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -90,7 +103,7 @@ const Ministries = () => {
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
-                    <Music className="w-5 h-5 mt-1 text-green-600" />
+                    <Music className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Our weekly gatherings include worship led by the children themselves,
                       interactive Bible lessons, and creative group activities that make Scripture
@@ -98,7 +111,7 @@ const Ministries = () => {
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Award className="w-5 h-5 mt-1 text-green-600" />
+                    <Award className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Annual talent tests and our mid-year anniversary celebration showcase the
                       incredible gifts God has given our children, while also inviting new families
