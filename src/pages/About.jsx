@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Church, Users, BookOpen, Calendar, Cross } from "lucide-react";
-import Header from "../components/Header";
 import SereneBackground from "../components/SereneBackground";
 import FrostedCard from "../components/FrostedCard";
 import { images } from "../assets/images";
@@ -145,7 +144,6 @@ export default function About() {
 
   return (
     <div className="relative">
-      <Header />
       <SereneBackground />
       
       <div className="relative z-10 pt-24 pb-16 min-h-screen">
