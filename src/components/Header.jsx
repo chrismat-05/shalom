@@ -95,8 +95,8 @@ export default function Header() {
       <NavLink
         to={to}
         className={({ isActive }) =>
-          `relative px-2 py-1 text-sm font-medium transition-colors hover:text-indigo-600 ${
-            isActive ? "text-indigo-600" : "text-gray-700"
+          `relative px-2 py-1 text-sm font-medium transition-colors hover:text-red-600 ${
+            isActive ? "text-red-600" : "text-gray-700"
           }`
         }
         onMouseEnter={() => setIsHovered(true)}
@@ -107,7 +107,7 @@ export default function Header() {
             {name}
             {(isActive || isHovered) && (
               <motion.div
-                className="absolute bottom-0 left-0 h-0.5 bg-indigo-600 w-full"
+                className="absolute bottom-0 left-0 h-0.5 bg-red-600 w-full"
                 layoutId="underline"
                 initial={{ scaleX: 0, originX: 1 }}
                 animate={{ 
@@ -159,7 +159,7 @@ export default function Header() {
             ))}
             <a
               href="#contact"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-sm font-medium"
+              className="bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-sm font-medium"
             >
               Get in Touch
             </a>
@@ -168,7 +168,7 @@ export default function Header() {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-red-600 focus:outline-none"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -200,7 +200,7 @@ export default function Header() {
               ))}
               <a
                 href="#contact"
-                className="block w-full text-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-base font-medium mt-2"
+                className="block w-full text-center bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-base font-medium mt-2"
                 onClick={() => setIsOpen(false)}
               >
                 Get in Touch

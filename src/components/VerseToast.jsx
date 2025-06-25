@@ -26,13 +26,13 @@ export default function VerseToast() {
             exit={{ opacity: 0, y: 50 }}
             className="fixed bottom-6 right-6 max-w-sm p-4 bg-white/30 backdrop-blur-lg border border-white/40 rounded-xl shadow-xl z-50 hidden sm:flex flex-col gap-2 text-sm"
           >
-            <div className="text-indigo-800">Here's a Bible Verse for you:</div>
+            <div className="text-red-800">Here's a Bible Verse for you:</div>
             <div className="text-gray-800 font-semibold">{verse.text}</div>
-            <div className="text-xs text-indigo-700 text-right italic">— {verse.reference}</div>
+            <div className="text-xs text-red-700 text-right italic">— {verse.reference}</div>
             <div className="flex justify-between items-center mt-2">
               <button
                 onClick={handleShare}
-                className="text-indigo-600 flex items-center gap-1 hover:underline"
+                className="text-red-600 flex items-center gap-1 hover:underline"
               >
                 <Share2 size={16} /> Share
               </button>
@@ -53,7 +53,7 @@ export default function VerseToast() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: [1, 1.1, 1] }}
           transition={{ repeat: Infinity, repeatType: "loop", duration: 2 }}
-          className="fixed bottom-6 right-6 p-3 bg-indigo-600/20 backdrop-blur-md border border-indigo-600/30 rounded-full shadow-md z-40 text-indigo-600 hidden sm:flex"
+          className="fixed bottom-6 right-6 p-3 bg-red-600/20 backdrop-blur-md border border-red-600/30 rounded-full shadow-md z-40 text-red-600 hidden sm:flex"
         >
           <MessageSquareQuote size={20} />
         </motion.button>
