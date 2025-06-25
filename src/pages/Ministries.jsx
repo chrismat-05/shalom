@@ -119,7 +119,7 @@ const Ministries = () => {
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Tent className="w-5 h-5 mt-1 text-green-600" />
+                    <Tent className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Before COVID, our desert campouts were legendary - a time of games, cooking, and
                       fellowship under the stars that we hope to revive soon!
@@ -132,7 +132,7 @@ const Ministries = () => {
                     "Train up a child in the way he should go, and when he is old he will not depart
                     from it."
                   </p>
-                  <p className="text-sm text-red-600 opacity-80">- Proverbs 22:6 (Our guiding verse for CBS)</p>
+                  <p className="text-sm text-red-600 opacity-80">- Proverbs 22:6</p>
                 </div>
               </div>
             </div>
@@ -188,14 +188,14 @@ const Ministries = () => {
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
-                    <Mic className="w-5 h-5 mt-1 text-green-600" />
+                    <Mic className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Our meetings burst with energy - from soul-stirring worship to Bible quizzes that
                       get surprisingly competitive (in the best way possible)!
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Mountain className="w-5 h-5 mt-1 text-green-600" />
+                    <Mountain className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Our annual retreats are the stuff of legend - imagine the whole church camping
                       together, sharing testimonies around the fire, and waking up to pray as the sun
@@ -203,7 +203,7 @@ const Ministries = () => {
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Star className="w-5 h-5 mt-1 text-green-600" />
+                    <Star className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       The end-of-year talent tests and anniversary celebration give our youth a
                       platform to shine, whether through music, art, or powerful Scripture
@@ -217,7 +217,7 @@ const Ministries = () => {
                     "Let no one despise your youth, but be an example to the believers in word, in
                     conduct, in love, in spirit, in faith, in purity."
                   </p>
-                  <p className="text-sm text-red-600 opacity-80">- 1 Timothy 4:12 (Our PYPA motto)</p>
+                  <p className="text-sm text-red-600 opacity-80">- 1 Timothy 4:12</p>
                 </div>
               </div>
             </div>
@@ -274,14 +274,14 @@ const Ministries = () => {
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
-                    <HandHeart className="w-5 h-5 mt-1 text-green-600" />
+                    <HandHeart className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Our outreach extends from hospital visitations to supporting families in need -
                       we believe faith should roll up its sleeves and get to work.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <CalendarHeart className="w-5 h-5 mt-1 text-green-600" />
+                    <CalendarHeart className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Every 2nd Saturday, we gather for worship that often turns into spontaneous
                       prayer sessions, and weekly online meetings keep us connected between in-person
@@ -289,7 +289,7 @@ const Ministries = () => {
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Gift className="w-5 h-5 mt-1 text-green-600" />
+                    <Gift className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
                       Whether it's covering medical expenses, school fees, or just being there with a
                       meal and prayer, our sisters know how to show up when it matters most.
@@ -302,7 +302,7 @@ const Ministries = () => {
                     "Charm is deceitful and beauty is passing, but a woman who fears the Lord shall be
                     praised."
                   </p>
-                  <p className="text-sm text-red-600 opacity-80">- Proverbs 31:30 (Our Women's Fellowship verse)</p>
+                  <p className="text-sm text-red-600 opacity-80">- Proverbs 31:30</p>
                 </div>
               </div>
             </div>
