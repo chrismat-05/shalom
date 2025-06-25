@@ -45,8 +45,7 @@ const Ministries = () => {
                     Our Ministries
                 </h1>
                 <p className="text-lg max-w-3xl mx-auto md:mx-0 text-gray-700">
-                    Discover the vibrant ministries that form the heartbeat of our church family, each
-                    serving unique needs and nurturing spiritual growth.
+                    Discover the vibrant ministries that form the heartbeat of our church family, each serving unique needs and nurturing spiritual growth.
                 </p>
                 </div>
             </div>
@@ -95,42 +94,33 @@ const Ministries = () => {
                   <h2 className="text-3xl font-bold text-red-700">Children's Bible School (CBS)</h2>
                 </div>
                 <p className="mb-4 text-gray-700">
-                  Every Friday morning, our church comes alive with the joyful sounds of children
-                  learning God's Word at CBS. What began as a simple Sunday School has blossomed into
-                  a vibrant ministry with over 40 students from LKG to 12th grade, lovingly guided by
-                  our team of 10 dedicated teachers.
+                  Every Friday morning, our church comes alive with the joyful sounds of children learning God's Word at CBS. What began as a simple Sunday School has blossomed into a vibrant ministry with over 40 students from LKG to 12th grade, lovingly guided by our team of 10+ dedicated teachers.
                 </p>
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <Music className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Our weekly gatherings include worship led by the children themselves,
-                      interactive Bible lessons, and creative group activities that make Scripture
-                      come alive.
+                      Our weekly gatherings include worship led by the children themselves, interactive Bible lessons, and creative group activities that make Scripture come alive.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Award className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Annual talent tests and our mid-year anniversary celebration showcase the
-                      incredible gifts God has given our children, while also inviting new families
-                      to join.
+                      Annual talent tests and our mid-year anniversary celebration showcase the incredible gifts God has given our children, while also inviting new families to join.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Tent className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Before COVID, our desert campouts were legendary - a time of games, cooking, and
-                      fellowship under the stars that we hope to revive soon!
+                      Before COVID, our desert campouts were legendary - a time of games, cooking, and fellowship under the stars that we hope to revive soon!
                     </p>
                   </div>
                 </div>
                 
                 <div className="bg-red-50 p-4 rounded-xl border border-red-200">
                   <p className="font-medium text-red-700">
-                    "Train up a child in the way he should go, and when he is old he will not depart
-                    from it."
+                    "Train up a child in the way he should go, and when he is old he will not depart from it."
                   </p>
                   <p className="text-sm text-red-600 opacity-80">- Proverbs 22:6</p>
                 </div>
@@ -181,41 +171,33 @@ const Ministries = () => {
                   <h2 className="text-3xl font-bold text-red-700">Pentecostal Youth People Association (PYPA)</h2>
                 </div>
                 <p className="mb-4 text-gray-700">
-                  For 40 years, PYPA has been where our youth discover their God-given purpose
-                  through fellowship, worship, and service. Twice a month, our young people gather to
-                  lead programs that blend spiritual growth with creative expression.
+                  For years now, PYPA has been where our youth discover their God-given purpose through fellowship, worship, and service. Twice a month, our young people gather to lead programs that blend spiritual growth with creative expression.
                 </p>
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <Mic className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Our meetings burst with energy - from soul-stirring worship to Bible quizzes that
-                      get surprisingly competitive (in the best way possible)!
+                      Our meetings burst with energy - from soul-stirring worship to Bible quizzes that get surprisingly competitive!
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Mountain className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Our annual retreats are the stuff of legend - imagine the whole church camping
-                      together, sharing testimonies around the fire, and waking up to pray as the sun
-                      rises.
+                      Our annual retreats are the stuff of legend - imagine the whole church camping together, sharing testimonies, playing games, having fun in the swimming pool and much more.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Star className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      The end-of-year talent tests and anniversary celebration give our youth a
-                      platform to shine, whether through music, art, or powerful Scripture
-                      recitation.
+                      The end-of-year talent tests and anniversary celebration give our youth a platform to shine, whether through singing, elocutions, essays, memory verse competitions or even drawing competitions..
                     </p>
                   </div>
                 </div>
                 
                 <div className="bg-red-50 p-4 rounded-xl border border-red-200">
                   <p className="font-medium text-red-700">
-                    "Let no one despise your youth, but be an example to the believers in word, in
-                    conduct, in love, in spirit, in faith, in purity."
+                    "Let no one despise your youth, but be an example to the believers in word, in conduct, in love, in spirit, in faith, in purity."
                   </p>
                   <p className="text-sm text-red-600 opacity-80">- 1 Timothy 4:12</p>
                 </div>
@@ -266,41 +248,34 @@ const Ministries = () => {
                   <h2 className="text-3xl font-bold text-red-700">Women's Fellowship</h2>
                 </div>
                 <p className="mb-4 text-gray-700">
-                  Since 1991, our Women's Fellowship has been the quiet powerhouse of our church - a
-                  sisterhood that prays, serves, and loves relentlessly. More than just monthly
-                  meetings, we're a network of women committed to living out Proverbs 31 in practical
-                  ways.
+                  Our Women's Fellowship has been the quiet powerhouse of our church - a sisterhood that prays, serves, and loves relentlessly. More than just monthly
+                  meetings, we're a network of women committed to living out Proverbs 31 in practical ways.
                 </p>
                 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start gap-3">
                     <HandHeart className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Our outreach extends from hospital visitations to supporting families in need -
-                      we believe faith should roll up its sleeves and get to work.
+                      Our outreach extends from hospital visitations to supporting families in need - we believe faith should roll up its sleeves and get to work.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CalendarHeart className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Every 2nd Saturday, we gather for worship that often turns into spontaneous
-                      prayer sessions, and weekly online meetings keep us connected between in-person
-                      gatherings.
+                      Every 2nd Saturday, we gather for prayer and worship, and weekly meetings keep us connected and in prayers for each other.
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Gift className="w-10 h-10 text-green-600" />
                     <p className="text-gray-700">
-                      Whether it's covering medical expenses, school fees, or just being there with a
-                      meal and prayer, our sisters know how to show up when it matters most.
+                      Whether it's covering medical expenses, school fees, or just being there with a meal and prayer, our sisters know how to show up when it matters most.
                     </p>
                   </div>
                 </div>
                 
                 <div className="bg-red-50 p-4 rounded-xl border border-red-200">
                   <p className="font-medium text-red-700">
-                    "Charm is deceitful and beauty is passing, but a woman who fears the Lord shall be
-                    praised."
+                    "Charm is deceitful and beauty is passing, but a woman who fears the Lord shall be praised."
                   </p>
                   <p className="text-sm text-red-600 opacity-80">- Proverbs 31:30</p>
                 </div>
