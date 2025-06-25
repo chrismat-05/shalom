@@ -1,20 +1,20 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/IPC Shalom.png";
 
 const MobileNavItem = ({ to, name, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
         `block px-3 py-2 rounded-md text-base font-medium relative ${
           isActive
-            ? "text-indigo-600 bg-indigo-50"
-            : "text-gray-700 hover:text-indigo-600 hover:bg-indigo-50"
+            ? "text-red-600 bg-red-50"
+            : "text-gray-700 hover:text-red-600 hover:bg-green-50"
         }`
       }
       onClick={onClick}
@@ -26,16 +26,16 @@ const MobileNavItem = ({ to, name, onClick }) => {
           {name}
           {(isActive || isHovered) && (
             <motion.div
-              className="absolute bottom-0 left-0 h-0.5 bg-indigo-600 w-full"
+              className="absolute bottom-0 left-0 h-0.5 bg-green-600 w-full"
               layoutId="mobile-underline"
               initial={{ scaleX: 0, originX: 1 }}
-              animate={{ 
+              animate={{
                 scaleX: 1,
-                transition: { 
-                  type: "spring", 
-                  bounce: 0.2, 
-                  duration: 0.4 
-                }
+                transition: {
+                  type: "spring",
+                  bounce: 0.2,
+                  duration: 0.4,
+                },
               }}
             />
           )}
@@ -52,9 +52,10 @@ export default function Header() {
   const [isScrollingUp, setIsScrollingUp] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const heroRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const hero = document.querySelector('.hero');
+    const hero = document.querySelector(".hero");
     if (hero) {
       heroRef.current = hero;
     }
@@ -62,23 +63,28 @@ export default function Header() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       const heroHeight = heroRef.current?.offsetHeight || 0;
-      
+
       const inHeroSection = currentScrollY < heroHeight;
       setIsInHero(inHeroSection);
 
       const scrollingUp = currentScrollY < lastScrollY;
       setIsScrollingUp(scrollingUp);
-      
+
       setShouldHide(!inHeroSection && !scrollingUp && !currentScrollY > 50);
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleContactClick = () => {
+    setIsOpen(false);
+    navigate("/", { state: { scrollTo: "contact" } });
   };
 
   const navLinks = [
@@ -90,7 +96,7 @@ export default function Header() {
 
   const NavItem = ({ to, name }) => {
     const [isHovered, setIsHovered] = useState(false);
-    
+
     return (
       <NavLink
         to={to}
@@ -110,13 +116,13 @@ export default function Header() {
                 className="absolute bottom-0 left-0 h-0.5 bg-red-600 w-full"
                 layoutId="underline"
                 initial={{ scaleX: 0, originX: 1 }}
-                animate={{ 
+                animate={{
                   scaleX: 1,
-                  transition: { 
-                    type: "spring", 
-                    bounce: 0.2, 
-                    duration: 0.4 
-                  }
+                  transition: {
+                    type: "spring",
+                    bounce: 0.2,
+                    duration: 0.4,
+                  },
                 }}
               />
             )}
@@ -129,13 +135,13 @@ export default function Header() {
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
-      animate={{ 
-        opacity: isInHero ? 0 : (shouldHide ? 0 : (isScrollingUp ? 1 : 0.8)),
-        y: isInHero ? -20 : 0
+      animate={{
+        opacity: isInHero ? 0 : shouldHide ? 0 : isScrollingUp ? 1 : 0.8,
+        y: isInHero ? -20 : 0,
       }}
-      transition={{ 
+      transition={{
         duration: isScrollingUp ? 0.2 : 0.4,
-        ease: isScrollingUp ? "easeOut" : "easeIn"
+        ease: isScrollingUp ? "easeOut" : "easeIn",
       }}
       className={`fixed w-full top-0 z-50 bg-white/90 shadow-sm py-2 backdrop-blur-md`}
     >
@@ -157,12 +163,12 @@ export default function Header() {
             {navLinks.map((link) => (
               <NavItem key={link.path} to={link.path} name={link.name} />
             ))}
-            <a
-              href="#contact"
+            <button
+              onClick={handleContactClick}
               className="bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-sm font-medium"
             >
               Get in Touch
-            </a>
+            </button>
           </nav>
 
           <div className="md:hidden flex items-center">
@@ -170,11 +176,7 @@ export default function Header() {
               onClick={toggleMenu}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-red-600 focus:outline-none"
             >
-              {isOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -198,13 +200,12 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                 />
               ))}
-              <a
-                href="#contact"
+              <button
+                onClick={handleContactClick}
                 className="block w-full text-center bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-base font-medium mt-2"
-                onClick={() => setIsOpen(false)}
               >
                 Get in Touch
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

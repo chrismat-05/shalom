@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Church, Clock, MapPin, Mail, Phone, Calendar, Users, Cross, BookOpen, HeartHandshake } from "lucide-react";
 import { Facebook as FacebookIcon, Instagram as InstagramIcon, Youtube as YoutubeIcon } from "lucide-react";
@@ -32,6 +34,16 @@ const itemVariants = {
 };
 
 export default function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "contact") {
+      const section = document.getElementById("contact");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div className="relative">
       <section className="hero">
@@ -66,14 +78,12 @@ export default function Home() {
                   >
                     Learn More
                   </motion.a>
-                  <motion.a
-                    href="#contact"
-                    className="inline-block border-2 border-red-600 text-red-600 px-6 py-3 rounded-full hover:bg-red-600 hover:text-white transition shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <button
+                    onClick={() => navigate("/", { state: { scrollTo: "contact" } })}
+                    className="bg-gradient-to-r from-red-600 to-green-600 text-white px-4 py-2 rounded-md hover:opacity-90 transition-all text-sm font-medium"
                   >
                     Get in Touch
-                  </motion.a>
+                  </button>
                 </motion.div>
               </motion.div>
             </FrostedCard>
