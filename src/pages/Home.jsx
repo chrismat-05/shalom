@@ -7,7 +7,6 @@ import FrostedCard from "../components/FrostedCard";
 import OnboardingModal from "../components/OnboardingModal";
 import FixedBackgroundSection from "../components/FixBG";
 import {images} from "../assets/images";
-import Header from "../components/Header";
 import SereneBackground from "../components/SereneBackground";
 
 const containerVariants = {
@@ -38,7 +37,6 @@ export default function Home() {
       <section className="hero">
         <HeroSlider />
       </section>
-      <Header />
       <FixedBackgroundSection imageUrl={images.bg1}>
         <div className="max-w-7xl mx-auto px-4 sm:px-8 py-24 relative z-10">
           <motion.section 
