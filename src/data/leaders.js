@@ -1,49 +1,51 @@
+import { images } from "../assets/images"
+
 export const leaders = {
   churchLeadership: [
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Pr. Saji P Thomas",
       position: "Pastor",
-      img: "logo"
+      img: images.logo
     },
     
   ],
@@ -51,81 +53,76 @@ export const leaders = {
     {
       name: "Member 1",
       position: "Coordinator",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Coordinator",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Coordinator",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Coordinator",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Coordinator",
-      img: "logo"
-    },
-    {
-      name: "Member 1",
-      position: "Coordinator",
-      img: "logo"
+      img: images.logo
     },
   ],
   pypaLeadership: [
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "President",
-      img: "logo"
+      img: images.logo
     },
   ],
   womensFellowship: [
     {
       name: "Member 1",
       position: "Leader",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Leader",
-      img: "logo"
+      img: images.logo
     },
     {
       name: "Member 1",
       position: "Leader",
-      img: "logo"
+      img: images.logo
     },
   ]
 };
