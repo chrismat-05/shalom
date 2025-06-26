@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import StickyFooter from "./components/StickyFooter";
 import VerseToast from "./components/VerseToast";
 import ScrollToTop from "./components/ScrollToTop";
+import Gallery from "./pages/Gallery";
 
 export default function App() {
   return (
@@ -17,7 +18,11 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<About />} />
           <Route path="/ministries" element={<Ministries />} />
+          <Route path="/ministry" element={<Ministries />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/photos" element={<Gallery />} />
         </Routes>
         <VerseToast />
         <StickyFooter />
