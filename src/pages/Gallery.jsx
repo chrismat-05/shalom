@@ -75,9 +75,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2024-event1",
+      container: "#gallery-ordination-pr-saji",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "2024-event1" }],
+      mediaAssets: [{ tag: "ordination-pr-saji" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -87,9 +87,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2024-event2",
+      container: "#gallery-40-years-thanksgiving",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "2024-event2" }],
+      mediaAssets: [{ tag: "40-years-thanksgiving" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -99,9 +99,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2022-event1",
+      container: "#gallery-baptism-aksa-job-niha-ashley",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "2022-event1" }],
+      mediaAssets: [{ tag: "baptism-aksa-job-niha-ashley" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -111,9 +111,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2022-event2",
+      container: "#gallery-baptism-rebecca-stephanie-hephzibah",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "2022-event2" }],
+      mediaAssets: [{ tag: "baptism-rebecca-stephanie-hephzibah" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -123,9 +123,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2010-2021",
+      container: "#gallery-archive-2010-to-2021",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "archive-2010-2021" }],
+      mediaAssets: [{ tag: "archive-2010-to-2021" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -223,14 +223,14 @@ export default function Gallery() {
               <FrostedCard>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-green-700 mb-3">2024 Event 1</h3>
-                  <div id="gallery-2024-event1" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <div id="gallery-ordination-pr-saji" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
               
               <FrostedCard>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-green-700 mb-3">2024 Event 2</h3>
-                  <div id="gallery-2024-event2" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <div id="gallery-40-years-thanksgiving" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
             </div>
@@ -252,14 +252,14 @@ export default function Gallery() {
               <FrostedCard>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-green-700 mb-3">2022 Event 1</h3>
-                  <div id="gallery-2022-event1" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <div id="gallery-baptism-aksa-job-niha-ashley" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
               
               <FrostedCard>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-green-700 mb-3">2022 Event 2</h3>
-                  <div id="gallery-2022-event2" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <div id="gallery-baptism-rebecca-stephanie-hephzibah" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
             </div>
@@ -279,7 +279,7 @@ export default function Gallery() {
             
             <FrostedCard>
               <div className="p-4">
-                <div id="gallery-2010-2021" style={{ width: '100%', minHeight: '400px' }}></div>
+                <div id="gallery-archive-2010-to-2021" style={{ width: '100%', minHeight: '400px' }}></div>
               </div>
             </FrostedCard>
           </motion.section>
