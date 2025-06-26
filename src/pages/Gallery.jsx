@@ -63,9 +63,9 @@ export default function Gallery() {
     }).render();
 
     cloudinary.galleryWidget({
-      container: "#gallery-2025-event2",
+      container: "#gallery-2023-pypa-retreat",
       cloudName: "ipcshalom",
-      mediaAssets: [{ tag: "2025-event2" }],
+      mediaAssets: [{ tag: "23-pypa-retreat" }],
       layout: "mosaic",
       zoom: true,
       carouselStyle: "indicators",
@@ -201,7 +201,7 @@ export default function Gallery() {
               <FrostedCard>
                 <div className="p-4">
                   <h3 className="text-xl font-bold text-green-700 mb-3">2025 Event 2</h3>
-                  <div id="gallery-2025-event2" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <div id="gallery-2023-pypa-retreat" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
             </div>
