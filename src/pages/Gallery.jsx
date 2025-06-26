@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { Images, Calendar } from "lucide-react";
+
 import FrostedCard from "../components/FrostedCard";
 import SereneBackground from "../components/SereneBackground";
+import {images} from "../assets/images"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -153,30 +155,43 @@ export default function Gallery() {
       
       <div className="relative z-10 pt-24 pb-16 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.section
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="mb-16"
-          >
-            <FrostedCard>
-              <motion.div variants={itemVariants} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Images size={48} className="text-red-600" />
+        <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="mb-16"
+        >
+        <FrostedCard>
+            <div className="flex flex-col md:flex-row items-center gap-8">
+            <motion.div variants={itemVariants} className="text-center md:text-left md:flex-1">
+                <div className="flex justify-center md:justify-start mb-4">
+                <Images size={48} className="text-red-600" />
                 </div>
                 <h1 className="text-4xl font-bold bg-gradient-to-r from-red-600 to-green-600 bg-clip-text text-transparent mb-4">
-                  Church Gallery
+                Church Gallery
                 </h1>
                 <motion.div variants={fadeInVariants} className="text-gray-700 text-lg">
-                  <p>
+                <p>
                     Relive the cherished memories and milestones of IPC Shalom through our photo gallery. 
                     From worship services to special events, these images capture the spirit of our community.
-                  </p>
+                </p>
                 </motion.div>
-              </motion.div>
-            </FrostedCard>
-          </motion.section>
+            </motion.div>
+
+            <div className="w-full md:w-1/3 flex justify-end">
+                <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl w-full max-w-[400px]">
+                <img 
+                    src={images.community}
+                    alt="Church Community" 
+                    className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-red-600/30 to-green-600/30"></div>
+                </div>
+            </div>
+            </div>
+        </FrostedCard>
+        </motion.section>
 
           <motion.section
             initial="hidden"
