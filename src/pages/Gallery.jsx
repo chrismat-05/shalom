@@ -185,23 +185,19 @@ export default function Gallery() {
             variants={containerVariants}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-red-700 mb-6 flex items-center gap-2">
-              <Calendar size={24} />
-              2025 Events
-            </h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2025 Event 1</h3>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">2025 Sunday School Anniversary</h3>
                   <div id="gallery-2025-event1" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
               
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2025 Event 2</h3>
-                  <div id="gallery-2023-pypa-retreat" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">Ordination: Pr. Saji</h3>
+                  <div id="gallery-ordination-pr-saji" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
             </div>
@@ -214,22 +210,18 @@ export default function Gallery() {
             variants={containerVariants}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-red-700 mb-6 flex items-center gap-2">
-              <Calendar size={24} />
-              2024 Events
-            </h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2024 Event 1</h3>
-                  <div id="gallery-ordination-pr-saji" style={{ width: '100%', minHeight: '300px' }}></div>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">2023 PYPA Retreat</h3>
+                  <div id="gallery-2023-pypa-retreat" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
               
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2024 Event 2</h3>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">40 Years Thanksgiving Service</h3>
                   <div id="gallery-40-years-thanksgiving" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
@@ -243,22 +235,18 @@ export default function Gallery() {
             variants={containerVariants}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-red-700 mb-6 flex items-center gap-2">
-              <Calendar size={24} />
-              2022 Events
-            </h2>
             
             <div className="grid md:grid-cols-2 gap-6">
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2022 Event 1</h3>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">Baptism: Aksa, Job, Niha, Ashley</h3>
                   <div id="gallery-baptism-aksa-job-niha-ashley" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
               
               <FrostedCard>
                 <div className="p-4">
-                  <h3 className="text-xl font-bold text-green-700 mb-3">2022 Event 2</h3>
+                  <h3 className="text-xl font-bold text-green-700 mb-3">Baptism: Rebecca, Stephanie, Hephzibah</h3>
                   <div id="gallery-baptism-rebecca-stephanie-hephzibah" style={{ width: '100%', minHeight: '300px' }}></div>
                 </div>
               </FrostedCard>
@@ -274,7 +262,7 @@ export default function Gallery() {
           >
             <h2 className="text-3xl font-bold text-red-700 mb-6 flex items-center gap-2">
               <Calendar size={24} />
-              2010 – 2021 Images
+              Archive
             </h2>
             
             <FrostedCard>
@@ -290,10 +278,6 @@ export default function Gallery() {
             viewport={{ once: true, margin: "0px 0px -100px 0px" }}
             variants={containerVariants}
           >
-            <h2 className="text-3xl font-bold text-red-700 mb-6 flex items-center gap-2">
-              <Calendar size={24} />
-              Before 2010 Images
-            </h2>
             
             <FrostedCard>
               <div className="p-4">
