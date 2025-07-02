@@ -70,7 +70,7 @@ export default function Gallery() {
       mediaAssets: [{ tag: "23-pypa-retreat" }],
       layout: "mosaic",
       zoom: true,
-      carouselStyle: "indicators",
+      carouselStyle: "thumbnails",
       carouselLocation: "bottom",
       navigationButtonPosition: "outside",
       aspectRatio: "16:9"
