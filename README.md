@@ -1,12 +1,60 @@
-# React + Vite
+# IPC Shalom Website
+This is the official website project for **IPC Shalom**, Bahrain - developed and maintained by [Chris Mathew Aje (CMA)](https://thecma.xyz). Built with modern frontend technologies for a clean, fast, and responsive user experience.
+> This project is **private and proprietary**. For license terms, refer to the [LICENSE](./LICENSE.txt) file.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Project Overview
+This website serves as a digital home for IPC Shalom Church - sharing church updates, media, ministries, events and much more.
+Currently under **revamp**, and actively being developed with modern tools like **React 19**, **Vite**, **Tailwind CSS**, and more.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **React 19** – UI library
+- **Vite** – Development server & build tool
+- **Tailwind CSS 4** – Utility-first CSS framework
+- **Framer Motion** – Animations and transitions
+- **Lucide React** – Icon library
+- **React Router DOM v7** – Routing
+- **ESLint** – Linting and code quality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Scripts
+| Script        | Description                            |
+| ------------- | -------------------------------------- |
+| `npm run dev` | Start local development server         |
+| `npm run build` | Build project for production         |
+| `npm run preview` | Preview production build locally   |
+| `npm run lint` | Run ESLint on the project             |
+
+---
+
+## Deployment
+| Branch   | Purpose        | Deployment URL                              |
+|----------|----------------|---------------------------------------------|
+| `develop` | Active development | [shalom-revamp.netlify.app](http://shalom-revamp.netlify.app) |
+| `main`    | Production live site | [ipcshalom.org](https://ipcshalom.org) _(To be deployed)_ |
+
+Deployment is managed via **Netlify**, with automatic builds on branch updates.
+
+---
+
+## Development Notes
+- This project uses the Vite + React template for faster builds and HMR.
+- Code quality is enforced using ESLint with recommended plugins.
+- Tailwind and PostCSS are used for styling and vendor prefixing.
+- Ensure Node.js (v18+) and npm are installed before running.
+
+---
+
+## Credits
+Website developed and maintained by [Chris Mathew Aje (CMA)](mailto:chrismaje63@gmail.com)  
+Church: [IPC Shalom, Bahrain](https://ipcshalom.org)
+
+---
+
+## 📄 License
+This project is licensed exclusively to **IPC Shalom, Bahrain**.  
+See [LICENSE](./LICENSE) for more details.
