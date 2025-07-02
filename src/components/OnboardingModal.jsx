@@ -7,7 +7,7 @@ const options = [
 ];
 
 export default function OnboardingModal() {
-  const [selected, setSelected] = useState(null);
+/*  const [selected, setSelected] = useState(null);
   const [open, setOpen] = useState(true);
 
   if (!open) return null;
@@ -54,4 +54,4 @@ export default function OnboardingModal() {
       </motion.div>
     </AnimatePresence>
   );
-}
+*/}
