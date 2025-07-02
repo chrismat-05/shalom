@@ -1,0 +1,30 @@
+LICENSE
+
+Copyright © 2025 IPC Shalom. All Rights Reserved.
+Developed by Chris Mathew Aje (CMA)
+
+This software and all associated files, assets, code, content, media, and design elements (collectively, the "Website") are the proprietary property of IPC Shalom, Bahrain, and are protected by applicable intellectual property and copyright laws.
+
+Restrictions
+Unless prior written authorization is obtained from IPC Shalom or the developer of the website: Chris, you are strictly prohibited from:
+- Copying, reproducing, or redistributing the Website or any of its components, in whole or in part, for any purpose.
+- Modifying, adapting, translating, reverse-engineering, decompiling, disassembling, or creating derivative works based on the Website.
+- Hosting, deploying, or mirroring the Website on any other domain, server, or platform.
+- Using the Website or any part of it for personal, commercial, or organizational use.
+- Rebranding, reselling, sublicensing, or transferring any part of the Website to any third party.
+
+Intellectual Property
+All intellectual property rights in and to the Website are and shall remain the exclusive property of IPC Shalom.
+The development and technical implementation of the Website were carried out by Chris Mathew Aje (CMA).
+No license or rights, express or implied, are granted under any intellectual property laws.
+
+Non-Open Source Declaration
+This Website is not open-source and is not licensed under any public open-source license. It is a closed, proprietary project developed solely for IPC Shalom.
+
+Permissions and Inquiries
+Any requests for licensing, collaboration, permissions, or other inquiries should be directed to:
+- chrismaje63@gmail.com
+- https://contact.thecma.xyz
+
+Licensed exclusively to IPC Shalom, Bahrain.
+Developed and maintained by Chris Mathew Aje (CMA).
