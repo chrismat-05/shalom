@@ -22,7 +22,7 @@ const CompactHero = () => {
               <div className="relative mb-6 md:mb-0 md:mr-8 flex-shrink-0 flex items-center justify-center" style={{ minWidth: '140px' }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
                 <img
-                  src="../../public/IPC Shalom.png"
+                  src="/IPC Shalom.png"
                   alt="IPC Shalom Logo"
                   className="relative h-36 w-36 md:h-40 md:w-40 shadow-card rounded-full bg-white"
                 />
