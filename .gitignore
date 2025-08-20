@@ -1,0 +1,168 @@
+# Node modules
+node_modules/
+
+# Build output
+/dist/
+/dist-ssr/
+/build/
+/.next/
+/.vercel/
+/.cache/
+/.turbo/
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Environment files
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
+*.local
+*.lock
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
+
+# TypeScript
+*.tsbuildinfo
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# Svelte
+__sapper__/
+.svelte-kit/
+
+# Next.js
+.next/
+out/
+
+# Nuxt.js
+.nuxt/
+dist/
+
+# Gatsby
+.cache/
+
+# Storybook
+.storybook/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Playwright
+playwright-report/
+
+# npm
+npm-debug.log*
+
+# Yarn
+.yarn/
+.pnp.*
+
+# pnpm
+.pnpm-debug.log*
+
+# Mac
+.AppleDouble
+.LSOverride
+
+# Windows
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# VS Code
+.history/
+
+# Prettier
+.prettier*
+
+# ESLint
+.eslintcache
+
+# Tailwind
+.tailwind*
+
+# Netlify
+.netlify/
+
+# Firebase
+.firebase/
+
+# Vercel
+.vercel/
+
+# Miscellaneous
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+
+# Coverage
+coverage/
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+yarn.lock
+
+# Package lock file
+package-lock.json
+
+# Others
+*.log
+*.gz
+
+# Ignore everything else that is not tracked
+# !.gitignore
