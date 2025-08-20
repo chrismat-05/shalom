@@ -30,7 +30,7 @@ const CompactHero = () => {
               IPC <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Shalom</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-6 font-medium">
-              The Indian Pentecostal Church of God
+              The Indian Pentecostal Church of God Shalom Bahrain
             </p>
             <div className="flex items-center justify-center gap-8 text-sm mb-8">
               <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
