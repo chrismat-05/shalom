@@ -33,7 +33,7 @@ const CompactHero = () => {
                   IPC <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Shalom</span>
                 </h1>
                 <p className="text-xl text-muted-foreground mb-2 font-medium">
-                  The Indian Pentecostal Church of God Shalom Bahrain
+                  The Indian Pentecostal Church of God - Shalom Bahrain
                 </p>
                 <p className="text-base text-muted-foreground mb-6 font-normal">
                   IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds and restore lives.
