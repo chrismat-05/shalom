@@ -17,29 +17,37 @@ const CompactHero = () => {
 
       <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 animate-scale-in">
-            <div className="relative inline-block mb-6">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
-              <img
-                src="public/IPC Shalom.png"
-                alt="IPC Shalom Logo"
-                className="relative mx-auto h-28 w-28 shadow-card rounded-full bg-white"
-              />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-3">
-              IPC <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Shalom</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-6 font-medium">
-              The Indian Pentecostal Church of God Shalom Bahrain
-            </p>
-            <div className="flex items-center justify-center gap-8 text-sm mb-8">
-              <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
-                <Calendar className="h-4 w-4 text-primary" />
-                <span className="font-medium">Est. 1981</span>
+          <div className="mb-12 animate-scale-in">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-8">
+              <div className="relative mb-6 md:mb-0 md:mr-8 flex-shrink-0 flex items-center justify-center" style={{ minWidth: '140px' }}>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-xl"></div>
+                <img
+                  src="public/IPC Shalom.png"
+                  alt="IPC Shalom Logo"
+                  className="relative h-36 w-36 md:h-40 md:w-40 shadow-card rounded-full bg-white"
+                />
               </div>
-              <div className="flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full">
-                <User className="h-4 w-4 text-secondary" />
-                <span className="font-medium">Pastor Saji Thomas</span>
+
+              <div className="flex flex-col items-center md:items-start text-center md:text-left flex-1">
+                <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-3">
+                  IPC <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Shalom</span>
+                </h1>
+                <p className="text-xl text-muted-foreground mb-2 font-medium">
+                  The Indian Pentecostal Church of God Shalom Bahrain
+                </p>
+                <p className="text-base text-muted-foreground mb-6 font-normal">
+                  IPC Shalom is a Spirit-filled, Christ-centered church committed to making disciples who love God, serve others, and share the Gospel. We believe in the transforming power of God's Word and the Holy Spirit to renew minds and restore lives.
+                </p>
+                <div className="flex items-center justify-center md:justify-start gap-8 text-sm mb-8">
+                  <div className="flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full">
+                    <Calendar className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Est. 1981</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-secondary/10 px-4 py-2 rounded-full">
+                    <User className="h-4 w-4 text-secondary" />
+                    <span className="font-medium">Pastor Saji Thomas</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
