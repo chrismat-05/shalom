@@ -1,4 +1,5 @@
 # IPC Shalom Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/36ac225e-9d8b-4b90-bd22-2833947bb3e2/deploy-status)](https://app.netlify.com/projects/shalom-revamp/deploys)
 This is the official website project for **IPC Shalom**, Bahrain - developed and maintained by [Chris Mathew Aje (CMA)](https://thecma.xyz). Built with modern frontend technologies for a clean, fast, and responsive user experience.
 > This project is **private and proprietary**. For license terms, refer to the [LICENSE](./LICENSE.txt) file.
 
